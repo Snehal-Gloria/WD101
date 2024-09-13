@@ -1,0 +1,46 @@
+<!-- <h2>Programming</h2>
+
+<ul id="lang"></ul>
+
+<script>
+    let languages=["C","Python","Java","C++"];
+    let res=[];
+    let listItems=(value)=>{
+        let ele = "<li>" +value+"</li>";
+        res.push(ele);
+
+    }
+    languages.forEach(listItems);
+
+    document.getElementById("lang").innerHTML = res.join("\n");
+</script> -->
+
+
+<h2>Multiplication</h2>
+<div id="table"></div>
+
+<script>
+    let multipliers = [1, 2, 3, 4, 5];
+    let numbers = [1, 2, 3];
+    let res = [];
+
+    numbers.forEach((n) => {  // Corrected arrow function syntax
+        let table = [];
+
+        let multiplicationTable = (num, multiplier) => {
+            let product = num * multiplier;
+            let html = "<p>" + num + " x " + multiplier + " = " + product + "</p>";
+            table.push(html);
+        }
+
+        multipliers.forEach((x) => multiplicationTable(n, x));  // Loop through multipliers
+        
+        let multiplicationTableToHtml = (table) => "<div>" + table.join("\n") + "</div>";
+
+        res.push(multiplicationTableToHtml(table));
+    });
+
+    console.table(res);  // Console output for debugging
+    document.getElementById("table").innerHTML = res.join("\n");  // Display the result in the div
+    
+</script>
