@@ -96,7 +96,7 @@ const submit = (e) => {
 
     localStorage.setItem("user-entries", JSON.stringify(userEntries));
     display();
-    document.getElementById("user-form").reset();
+    
 };
 
 document.getElementById('user-form').addEventListener("submit", submit);
