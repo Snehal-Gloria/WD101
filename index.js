@@ -92,13 +92,13 @@ const submit = (e) => {
         acceptTerms: acceptTerms.checked,
     };
     userEntries.push(entry);
-    console.log(userEntries);
+    //console.log(userEntries);
 
     localStorage.setItem("user-entries", JSON.stringify(userEntries));
     display();
+    document.getElementById("user-form").reset();
 };
 
 document.getElementById('user-form').addEventListener("submit", submit);
 
-form.reset();
 display();
